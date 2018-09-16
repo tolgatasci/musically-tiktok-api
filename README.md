@@ -13,25 +13,19 @@ Current Features
 		$password = 'password';
 		$captcha = null;
 		$i = new Musically();
-	//$resp = $i->register("email", "password"); no register need RE-CAPTCHA no passing
-	try{
-	
-		
-	if(!empty($_POST['kod'])){
+		//$resp = $i->register("email", "password"); no register need RE-CAPTCHA no passing
+		try{
+		if(!empty($_POST['kod'])){
 		$captcha = $_POST['kod']; 
-	}
-	
-	
-	
-
-	return false;*/
-	$resp = $i->login($username, $password,$captcha);
+		}
+		return false;*/
+		$resp = $i->login($username, $password,$captcha);
 	
 		
 	
-	/*	 $message = $i->listMessage();
-		 foreach($message as $mes):
-		 $i->deleteMessage($mes);
+		/*	 $message = $i->listMessage();
+		foreach($message as $mes):
+		$i->deleteMessage($mes);
 		 endforeach;*/
 		$following = $i->listFollowing("user_id");
 		if(!empty($following)){
@@ -64,6 +58,6 @@ Current Features
 		endforeach;
 		
 		endfor;
-	}catch(Exception $e){
+		}catch(Exception $e){
 		var_dump($e);
-	}`
+		}`
