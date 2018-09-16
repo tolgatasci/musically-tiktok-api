@@ -7,12 +7,12 @@ Current Features
 * if captcha need response capcha passing
 
 
-
-include('musically.php');
-$username = 'email';
-$password = 'password';
-$captcha = null;
-$i = new Musically();
+		
+		include('musically.php');
+		$username = 'email';
+		$password = 'password';
+		$captcha = null;
+		$i = new Musically();
 	//$resp = $i->register("email", "password"); no register need RE-CAPTCHA no passing
 	try{
 	
@@ -53,7 +53,7 @@ $i = new Musically();
 		}
 		
 
-$i->username = "username";
+		$i->username = "username";
 		for($c=0;$c<5000;$c++):
 		$test = $i->home_list();
 		
@@ -63,7 +63,7 @@ $i->username = "username";
 	
 		endforeach;
 		
-endfor;
+		endfor;
 	}catch(Exception $e){
 		var_dump($e);
-	}
+	}`
